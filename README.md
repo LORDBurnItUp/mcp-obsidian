@@ -115,6 +115,38 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 ```
 </details>
 
+<details>
+  <summary>Multiple MCP Servers Configuration</summary>
+
+You can configure multiple MCP servers together. Here's an example with both mcp-obsidian and livekit-docs:
+
+```json
+{
+  "mcpServers": {
+    "mcp-obsidian": {
+      "command": "uvx",
+      "args": [
+        "mcp-obsidian"
+      ],
+      "env": {
+        "OBSIDIAN_API_KEY": "<YOUR_OBSIDIAN_API_KEY>",
+        "OBSIDIAN_HOST": "<YOUR_OBSIDIAN_HOST>"
+      }
+    },
+    "livekit-docs": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch",
+        "https://docs.livekit.io/mcp"
+      ]
+    }
+  }
+}
+```
+
+This configuration allows you to use both Obsidian tools and LiveKit documentation access simultaneously in Claude.
+</details>
+
 ## Development
 
 ### Building
