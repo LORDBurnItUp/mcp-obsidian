@@ -59,6 +59,25 @@ OBSIDIAN_HOST=your_obsidian_host
 
 Note: You can find the key in the Obsidian plugin config.
 
+## Additional MCP Servers
+
+### Serena - Semantic Code Analysis
+
+This repository also includes setup instructions for **Serena**, a powerful coding agent toolkit that provides semantic retrieval and editing capabilities. Serena works alongside mcp-obsidian to enhance your development workflow with:
+
+- Semantic code analysis using Language Server Protocol (LSP)
+- Support for 30+ programming languages
+- Advanced code querying and editing functionalities
+
+**Quick Setup:**
+```bash
+./setup-serena.sh
+```
+
+For detailed setup instructions, see [SERENA_SETUP.md](SERENA_SETUP.md).
+
+For a complete MCP configuration with both servers, see [mcp-config-example.json](mcp-config-example.json).
+
 ## Quickstart
 
 ### Install
