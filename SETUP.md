@@ -8,9 +8,33 @@ Your Obsidian MCP server has been initialized! Follow the steps below to complet
 
 - ✅ Python dependencies installed (via `uv sync`)
 - ✅ `.env` configuration file created
+- ✅ Helper scripts created (`quick_setup.sh`, `verify_setup.py`)
 - ✅ Project is ready to run
 
-## Next Steps
+## Quick Setup (Recommended)
+
+Run the interactive setup script:
+
+```bash
+./quick_setup.sh
+```
+
+This script will:
+- Guide you through API key configuration
+- Test the connection to Obsidian
+- Verify everything is working
+
+Then verify your setup:
+
+```bash
+python3 verify_setup.py
+```
+
+## Manual Setup
+
+If you prefer to set up manually, follow these steps:
+
+### Next Steps
 
 ### 1. Install Obsidian Local REST API Plugin
 
@@ -153,6 +177,35 @@ tail -n 20 -f ~/Library/Logs/Claude/mcp-server-mcp-obsidian.log
 - Make sure Community Plugins are enabled in Obsidian
 - Search for "Local REST API" (not just "REST API")
 - Repository: https://github.com/coddingtonbear/obsidian-local-rest-api
+
+### Use the verification script
+
+Run the verification script to diagnose issues:
+
+```bash
+python3 verify_setup.py
+```
+
+This will check:
+- ✓ .env file exists
+- ✓ API key is configured
+- ✓ Connection to Obsidian works
+- ✓ API authentication succeeds
+
+## What's Automated vs Manual
+
+### ✅ Automated (Already Done)
+- Python environment setup
+- Dependency installation
+- Configuration file creation
+- Helper scripts for verification
+
+### ⚠️ Requires Manual Steps
+- **Installing Obsidian** - Desktop application (your machine)
+- **Installing Local REST API plugin** - In Obsidian settings
+- **Getting API key** - From Obsidian plugin settings
+- **Updating .env with API key** - Edit the file or run `quick_setup.sh`
+- **Running Obsidian** - Must be running when using the server
 
 ## Need Help?
 
